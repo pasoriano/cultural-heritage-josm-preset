@@ -15,6 +15,7 @@
 		es.name="Patrimonio Histórico"
 		
 		>
+		
 		  <item 
 		  	name="Yacimiento arqueológico"
 			type="node,closedway,relation"
@@ -33,10 +34,17 @@
 		    	es.text="Nombre"
 
 	    	/>
+
 			<text key="old_name" delete_if_empty="true"
 					text="old_name"
 					es.text="Nombre antiguo. ej. (Gadir)"
 				/>
+		   <combo key="site_type" delete_if_empty="true"
+		   			values="bigstone, petroglyph, tumulus, megalith, necropolis, fortification"
+		   			es.values="bigstone, Petroglifo, Túmulo, Megalito, Necropolis, Fortificación" 
+					text="site_type" 
+					es.text="Tipo"
+			/>
 		    
 		    <text key="protection_title" value="Bien de Interés Cultural" delete_if_empty="true"
 					text="protection_title"
@@ -71,6 +79,12 @@
 
 								
 				<label value= "Cronología"/>
+				<combo key="historic:civilization" delete_if_empty="true"
+						values="prehistoric,ancient_roman, western_roman" 
+						text="historic:civilization"
+						es.text="Civilización"
+
+				/>
 				<combo key="start_date" values="1895,1895-07,1895-07-25,~1895,before 1910-01-20,after 1823" delete_if_empty="true"
 					text="start_date" 
 					es.text="Fecha de construcción"
@@ -111,7 +125,7 @@
 
 				<text key="wikipedia" delete_if_empty="true"
 					text="Wikipedia Link" 
-					es.text="Enlace la Wikipedia"
+					es.text="Enlace la Wikipedia (es:Catedral de Sevilla)"
 
 				/>
 				
@@ -136,7 +150,212 @@
 				/>
 				<space/>
 		</item>
+		</group>
 
+		<group
+			name="Castle/Buildings"
+			de.name="Burg/Schloss/Palast/Gebäude"
+			nl.name="Burcht/Kasteel/Paleis/Gebouw"
+			fr.name="Fort/Château/Palais/Bâtiment"
+			icon="castle.png"
+		>
+			<item
+				name="Castle (stately)"
+				de.name="Schloss"
+				nl.name="Kasteel"
+				fr.name="Château"
+				icon="schloss.png" type="node,closedway,relation"
+			>
+				<space/>
+
+				<link
+					href="http://wiki.openstreetmap.org/wiki/Tag:historic=castle"
+					de.href="http://wiki.openstreetmap.org/wiki/DE:Tag:historic=castle"
+				/>
+				
+				<space/>
+
+				<key key="historic" value="castle" />
+				<key key="castle_type" value="stately" />
+
+				
+			</item> 
+
+			<item name="Castle (defensive)"
+				  type="node,closedway,relation"
+			>
+				 <space/>
+
+				  <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=castle"
+						de.href="http://wiki.openstreetmap.org/wiki/DE:Tag:historic=castle" />
+				  <space/>
+
+				  <key key="historic" value="castle" />
+				  <key key="castle_type" value="defensive" />
+
+			 				 
+				</item> 
+
+			<item name="Fort"
+				  type="node,closedway,relation"
+			>
+					 <space/>
+
+					 <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=castle"
+						   de.href="http://wiki.openstreetmap.org/wiki/DE:Tag:historic=castle"/>
+					 <space/>
+
+					 <key key="historic" value="castle" />
+					 <key key="castle_type" value="fortress" />
+					
+
+				<space/>
+
+					 
+				</item> 
+		
+				<item name="Shiro" 
+						
+						type="node,closedway,relation">
+						<space/>
+				
+						<link href="http://wiki.openstreetmap.org/wiki/Tag:historic=castle"
+							  de.href="http://wiki.openstreetmap.org/wiki/DE:Tag:historic=castle"/>
+						<space/>
+				
+						<key key="historic" value="castle" />
+						<key key="castle_type" value="shiro" />
+
+						
+				</item> 
+
+				<item name="Palace" 
+					  icon="palast.png" 
+					  de.name="Palast"
+					  nl.name="Paleis"
+					  type="node,closedway,relation">
+					  <key key="historic" value="castle" />
+					  <key key="castle_type" value="palace" />
+
+
+					
+				</item> 
+		
+				<item name="Manor" 
+						icon="manor.png" 
+
+						type="node,closedway">
+						<space/>
+
+						<link href="http://wiki.openstreetmap.org/wiki/Tag:historic=manor"
+							  de.href="http://wiki.openstreetmap.org/wiki/DE:Tag:historic=manor "/>
+						<space/>
+
+						<key key="historic" value="manor" />
+
+										</item> 
+
+				<item name="Historic city gate" 
+						icon="stadttor.png" 
+						de.name="Historisches Stadt-Tor"
+						nl.name="Historische stadstoren"
+						type="node,closedway">
+						<space/>
+
+						<link href="http://wiki.openstreetmap.org/wiki/Tag:historic%3Dcity_gate"
+							  de.href="http://wiki.openstreetmap.org/wiki/DE:Tag:historic%3Dcity_gate"/>
+						<space/>
+
+						<key key="historic" value="city_gate" />
+
+						
+				</item> 
+
+						<item name="Historic city wall" 
+						icon="wall.png" 
+						de.name="Historische Stadt-Mauer"
+						nl.name="Historische stadsmuur"
+						type="way,closedway,relation">
+						<space/>
+
+			
+						<key key="historic" value="citywalls" />
+
+						
+				</item> 
+
+
+						<item name="Historic building" 
+						icon="house.png" 
+						de.name="Historisches Gebäude"
+						nl.name="Historisch Gebouw"
+						type="node,closedway,relation">
+						<space/>
+
+			
+						<key key="historic" value="building" />
+
+						
+				</item> 
+
+		  <item name="Town hall" 
+						icon="rathaus.png" 
+						de.name="Historisches Rathaus"
+						nl.name="Stadhuis"
+						type="node,closedway,relation">
+						<space/>
+
+			
+						<key key="amenity" value="townhall" />
+						<key key="historic" value="yes" />
+
+						
+				</item> 
+
+
+		</group> 
+
+		<group name="Monastery" es.name="Monasterio">       
+
+				  <item name="Inactive Monastery - Historic" 
+						icon="kloster.png" 
+						de.name="ehemaliges Kloster"
+						nl.name="Voormalig klooster"
+						type="node,closedway,relation">
+						<key key="historic" value="monastery" />
+						<text key="name" text="Name" />
+						<text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" delete_if_empty="true" />
+
+						<space/>
+
+						<combo key="religion" text="Religion" values="christian, muslim" />               
+						<space/>
+
+						<combo key="denomination" text="denomination" values="roman_catholic" />                        
+
+
+						
+				</item> 
+
+				  <item name="Active Monastery  - Amenity" 
+						de.name="Aktives Kloster"
+						nl.name="Actief klooster"
+						icon="kloster.png"
+						type="node,closedway,relation">
+
+						<link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=monastery"/>
+
+						<key key="amenity" value="monastery" />
+
+						<text key="name" text="Name" />
+						<text key="old_name" text="old_name" de.text="alter Name" nl.text="Oude naam" delete_if_empty="true" />
+
+
+
+
+						
+				</item> 
+		</group> 
 		
 </group>
 </presets>
