@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" 
+	author="Patricio Soriano"
+	version="0.1_2014-04-24"
+ 
+	description="Cultural Heritage"
+	shortdescription="Cultural Heritage"
+ 
+	es.description="Patrimonio Histórico"
+	es.shortdescription="Patrimonio Histórico"
+
+>
+    	<group
+		name="Cultural Heritage"
+		es.name="Patrimonio Histórico"
+		
+		>
+		  <item 
+		  	name="Yacimiento arqueológico"
+			type="node,closedway,relation"
+		  	>
+		    <space/>
+		    <link href="http://wiki.openstreetmap.org/wiki/Tag:historic=archaeological_site"/>
+		    <label 
+		    	text="archaeological_site"
+		    	es.text="Yacimiento arqueológico" 
+		    	/>
+		 
+		    <space/>
+		    <key key="historical" value="archaeological_site"/>
+		    <text key="name" delete_if_empty="true"
+		    	text="Name"
+		    	es.text="Nombre"
+
+	    	/>
+			<text key="old_name" delete_if_empty="true"
+					text="old_name"
+					es.text="Nombre antiguo. ej. (Gadir)"
+				/>
+		    
+		    <text key="protection_title" value="Bien de Interés Cultural" delete_if_empty="true"
+					text="protection_title"
+					es.text="protection_title"
+		    	/>
+
+		    <combo key="protection_title:category" values="Monumento histórico, Jardín histórico, Conjunto histórico, Sitio histórico, Zona arqueológica" delete_if_empty="true"
+					text="protection_title:category" 
+					es.text="Categoría del BIC"
+				/>
+		    
+		    <text key="ref:bic=" value="" delete_if_empty="true"
+					text="ref:bic" 
+					es.text="Identificador MCU"
+		    	/>
+  				
+				<space/>
+
+				<check key="ruins" default="off" delete_if_empty="true"
+					text="ruins"
+					es.text="ruina"
+				/>
+				<space/>
+
+				<check key="heritage" default="off" delete_if_empty="true"
+					text="heritage"
+					es.text="Patrimonio"
+
+				/>
+				
+				<space/>
+
+								
+				<label value= "Cronología"/>
+				<combo key="start_date" values="1895,1895-07,1895-07-25,~1895,before 1910-01-20,after 1823" delete_if_empty="true"
+					text="start_date" 
+					es.text="Fecha de construcción"
+
+				/>
+				
+				<space/>
+
+				<label value= "Dirección"/>
+				
+				<text key="addr:street" delete_if_empty="true"
+					text="Street name"
+					es.text="Nombre de vía"
+
+				/>
+
+				<text key="addr:housenumber" delete_if_empty="true"
+				text="House number"
+				es.text="Número"
+				/>
+				
+				<combo key="addr:city" delete_if_empty="true" values="Aguilar de la Frontera, Hornachuelos, Córdoba"
+					text="City name"
+					es.text="Ciudad/Municipio"
+
+				/>
+				
+				<text key="addr:postcode" delete_if_empty="true"
+					text="Post code"
+					es.text="Código Postal"
+
+				/>
+				
+				<key key="addr:country" values="ES"/>
+				
+				<space/>
+				
+
+				<text key="wikipedia" delete_if_empty="true"
+					text="Wikipedia Link" 
+					es.text="Enlace la Wikipedia"
+
+				/>
+				
+				<space/> 
+
+				<text key="website" text="Website" delete_if_empty="true"/>
+				
+				<space/> 
+
+						
+								
+				<text key="image"  delete_if_empty="true"
+					text="Image-URL" 
+					es.text="URL de imágen" 
+
+				/>
+				
+					<text key="note" default="" delete_if_empty="true"
+					text="note"
+					es.text="Nota"
+			
+				/>
+				<space/>
+		</item>
+
+		
+</group>
+</presets>
