@@ -1,7 +1,7 @@
 cultural-heritage-josm-preset
 =============================
 
-Proyecto de creación de formulario de opciones y etiquetas predefinidas sobre Patrimonio Histórico para JOSM
+Proyecto de creación de formulario de opciones y etiquetas predefinidas sobre Patrimonio Histórico para JOSM. Este proyecto está vinculado a los trabajos de cartografiado en OSM de los Bienes de Interés Cultural de Córdoba.
 
 ## Enlaces
 
